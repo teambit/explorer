@@ -1,8 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://docs.bit.dev/configuration
-**/
-{
+**/{
   "$schema": "",
   /**
    * main configuration of the Bit workspace.
@@ -11,7 +10,7 @@
     /**
      * name of the workspace.
     **/
-    "name": "documenter",
+    "name": "explorer",
     /**
      * applies only on bit.dev. configure the main owner of your workspace.
     **/
@@ -19,7 +18,7 @@
     /**
      * set the default scope when there is no matching for the component in the components array.
      **/
-    "defaultScope": "bit.test-scope",
+    "defaultScope": "bit.explorer",
     /**
      * set the default directory when there is no matching for the component in the components array.
      **/
@@ -65,7 +64,6 @@
     */
     "extraArgs": []
   },
-
   /**
    * workspace variants allow to set different subsets of configuration for components in your workspace.
    * this is extremely useful for upgrading, aligning and building components with a
