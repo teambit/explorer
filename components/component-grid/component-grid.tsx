@@ -3,6 +3,8 @@ import styles from './component-grid.module.scss';
 
 export function ComponentGrid() {
     return (
-        <div></div>
+        <div className={styles.componentGrid}>
+
+        </div>
     )
 }
