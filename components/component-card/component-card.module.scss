@@ -6,7 +6,6 @@
     overflow: hidden;
 }
 .preview {
-    background-color: #ededed;
     width: 100%;
     height: 150px;
     border-top-left-radius: 5px;
@@ -16,6 +15,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-bottom: 1px solid #ededed;
+}
+.emptyPreview {
+    background-color: #ededed;
 }
 .content {
     padding: 16px;
