@@ -1,19 +1,21 @@
 .componentCard {
     border: 1px solid #ededed;
     width: 100%;
-    height: 300px;
     border-radius: 5px;
     overflow: hidden;
 }
+.previewContainer {
+    overflow: hidden;
+    padding-bottom: 57%;
+    height: 0;
+    position: relative;
+}
 .preview {
-    width: 100%;
-    height: 150px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     overflow: hidden;
     border-bottom: 1px solid #ededed;
 }
@@ -22,6 +24,7 @@
 }
 .content {
     padding: 16px;
+    height: calc(154px - 32px);
     .nameSpace {
         color: var(--text-muted, #6c707c);
         font-size: 10px;

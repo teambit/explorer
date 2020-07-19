@@ -8,7 +8,7 @@ export type ComponentCardProps = {
    */
   id: string;
   /**
-   * override styles 
+   * override styles
    */
   className?: string;
   /**
@@ -26,7 +26,15 @@ export function ComponentCard({
   const name = idArray.slice(-1);
   return (
     <div className={classNames(styles.componentCard, className)}>
-      <div className={classNames(styles.preview, {[styles.emptyPreview]: !preview})}>{preview}</div>
+      <div className={styles.previewContainer}>
+        <div
+          className={classNames(styles.preview, {
+            [styles.emptyPreview]: !preview,
+          })}
+        >
+          {preview}
+        </div>
+      </div>
       <div className={styles.content}>
         <div className={styles.nameSpace}>{nameSpace}</div>
         <div className={styles.name}>{name}</div>
