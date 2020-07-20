@@ -5,9 +5,9 @@ export type ComponentGridProps = {
 
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ComponentGrid({children}: ComponentGridProps) {
+export function ComponentGrid({children, ...rest}: ComponentGridProps) {
     return (
-        <div className={styles.componentGrid}>
+        <div className={styles.componentGrid} {...rest}>
             {children}
         </div>
     )

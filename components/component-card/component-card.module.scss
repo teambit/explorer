@@ -1,38 +1,31 @@
-.componentCard {
-    border: 1px solid #ededed;
-    width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.previewContainer {
-    overflow: hidden;
-    padding-bottom: 57%;
-    height: 0;
-    position: relative;
-}
-.preview {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    border-bottom: 1px solid #ededed;
-}
-.emptyPreview {
-    background-color: #ededed;
-}
-.content {
-    padding: 16px;
-    height: calc(154px - 32px);
-    .nameSpace {
-        color: var(--text-muted, #6c707c);
-        font-size: 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 6px;
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div {
+    display: flex;
+    align-items: center;
+    > span {
+      font-size: 14px;
+      margin-right: 10px;
     }
-    .name {
-        font-weight: bold;
+    .size {
+      font-size: 11px;
+      color: var(--text-muted, #6c707c);
+      vertical-align: middle;
     }
+  }
+}
+
+.dot {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #ededed;
+}
+
+.img {
+  height: 14px;
 }
