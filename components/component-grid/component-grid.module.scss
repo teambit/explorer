@@ -1,8 +1,4 @@
 .componentGrid {
-    padding-top: 80px;
-    padding-left: 10%;
-    margin-right: 20px;
-    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
     column-gap: 10px;
