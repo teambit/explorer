@@ -1,8 +1,11 @@
 import React from "react";
-import classNames from "classnames";
 import styles from "./component-card.module.scss";
-import { BaseComponentCard, BaseComponentCardProps } from "@bit/bit.explorer.ui.base-component-card";
+import {
+  BaseComponentCard,
+  BaseComponentCardProps,
+} from "@bit/bit.explorer.ui.base-component-card";
 import { Icon } from "@bit/bit.evangelist.elements.icon";
+import { Image } from "@bit/bit.evangelist.elements.image";
 import filesize from "filesize";
 
 // TODO - export from bit web and use component here
@@ -16,6 +19,7 @@ export function generateReadableSize(number) {
   if (checkIsNaN(number)) return;
   return filesize(number, { round: 0 }).toUpperCase();
 }
+// -------
 
 export type ComponentCardProps = {
   /**
@@ -66,11 +70,11 @@ export function ComponentCard({
   preview,
   version,
   description,
-  ciStatus,
+  // ciStatus,
   size,
-  framework,
+  // framework,
   isDeprecated,
-  isIntetnal,
+  // isIntetnal,
 }: ComponentCardProps) {
   return (
     <BaseComponentCard
@@ -88,9 +92,10 @@ export function ComponentCard({
           <Icon of="expand" className={styles.icon} />
           <span className={styles.size}>{generateReadableSize(size)}</span>
         </div>
-        <img
+        <Image
+          alt="react env"
           className={styles.img}
-          src="https://static.bit.dev/tutorial-icons/react.svg"
+          src="tutorial-icons/react.svg"
         />
       </div>
     </BaseComponentCard>
