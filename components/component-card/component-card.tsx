@@ -102,6 +102,10 @@ export function ComponentCard({
   );
 }
 
+ComponentCard.defaultProps = {
+  isDeprecated: false
+};
+
 function CiStatus() {
   return <span className={styles.dot}></span>;
 }

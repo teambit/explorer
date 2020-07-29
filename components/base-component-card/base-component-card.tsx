@@ -2,8 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import styles from "./base-component-card.module.scss";
 
-
-
 export type BaseComponentCardProps = {
   /**
    * the full name of the component
@@ -46,7 +44,7 @@ export function BaseComponentCard({
   return (
     <div className={classNames(styles.componentCard, className)}>
       <div
-        className={classNames(styles.deprectaed, {
+        className={classNames(styles.deprecated, {
           [styles.show]: isDeprecated,
         })}
       >
