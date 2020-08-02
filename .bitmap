@@ -35,7 +35,7 @@
         "exported": true,
         "lanes": []
     },
-    "teambit2.explorer-temp/ui/component-card@0.0.1": {
+    "teambit2.explorer-temp/ui/component-card@0.0.2": {
         "files": [
             {
                 "relativePath": "component-card.composition.tsx",

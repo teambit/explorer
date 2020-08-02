@@ -3,7 +3,7 @@ import styles from "./component-card.module.scss";
 import {
   BaseComponentCard,
   BaseComponentCardProps,
-} from "@bit/bit.explorer.ui.base-component-card";
+} from "@teambit/explorer-temp.ui.base-component-card";
 import { Icon } from "@teambit/evangelist-temp.elements.icon";
 import { Image } from "@teambit/evangelist-temp.elements.image";
 import filesize from "filesize";
