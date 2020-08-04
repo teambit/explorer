@@ -1,9 +1,20 @@
 .componentCard {
   position: relative;
-  border: 1px solid var(--border-color, #ededed);
+  border-color: var(--border-color, #ededed);
+  border-width: 1px;
+  border-style: solid;
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
+  transition: border-color 300ms ease-in-out;
+  &:hover {
+    border-color: var(--text-muted, #6C707C);
+  }
+  > a {
+    text-decoration: none;
+    color: var(--text-highlight);
+  }
 }
 .previewContainer {
   overflow: hidden;

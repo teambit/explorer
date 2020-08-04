@@ -43,33 +43,35 @@ export function BaseComponentCard({
   const name = idArray.slice(-1);
   return (
     <div className={classNames(styles.componentCard, className)}>
-      <div
-        className={classNames(styles.deprecated, {
-          [styles.show]: isDeprecated,
-        })}
-      >
-        deprecated
-      </div>
-      <div className={styles.previewContainer}>
+      <a href={id}>
         <div
-          className={classNames(styles.preview, {
-            [styles.emptyPreview]: !preview,
+          className={classNames(styles.deprecated, {
+            [styles.show]: isDeprecated,
           })}
         >
-          {preview}
+          deprecated
         </div>
-      </div>
-      <div className={styles.content}>
-        <div>
-          <div className={styles.nameSpace}>{nameSpace}</div>
-          <div className={styles.name}>
-            <span>{name}</span>
-            <span>{version}</span>
+        <div className={styles.previewContainer}>
+          <div
+            className={classNames(styles.preview, {
+              [styles.emptyPreview]: !preview,
+            })}
+          >
+            {preview}
           </div>
-          <div className={styles.description}>{description}</div>
         </div>
-        {children}
-      </div>
+        <div className={styles.content}>
+          <div>
+            <div className={styles.nameSpace}>{nameSpace}</div>
+            <div className={styles.name}>
+              <span>{name}</span>
+              <span>{version}</span>
+            </div>
+            <div className={styles.description}>{description}</div>
+          </div>
+          {children}
+        </div>
+      </a>
     </div>
   );
 }
