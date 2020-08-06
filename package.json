@@ -2,10 +2,5 @@
   "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {},
-  "scripts": {},
-  "bit": {
-    "env": {},
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
-  }
+  "scripts": {}
 }
