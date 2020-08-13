@@ -39,10 +39,7 @@
           "name": "@teambit/explorer-temp.{name}"
         }
       },
-      "@teambit/envs": {
-        "env": "@teambit/react",
-        "config": {}
-      }
+      "@teambit/react": {}
     }
   },
   /**
