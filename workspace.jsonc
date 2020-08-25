@@ -36,7 +36,8 @@
       },
       "@teambit/pkg": {
         "packageJson": {
-          "name": "@teambit/explorer-temp.{name}"
+          "name": "@teambit/explorer-temp.{name}",
+          "private": false
         }
       },
       "@teambit/react": {}
