@@ -75,7 +75,6 @@
         "@babel/preset-react": "^7.10.1",
         "@bit/bit.bit-dev-utils.time-ago": "0.0.4",
         "@teambit/evangelist.elements.icon": "^0.0.1",
-        "@teambit/evangelist.elements.image": "^0.0.1",
         "@bit/bit.utils.fs.sub-paths": "0.0.4",
         "@graphql-modules/core": "^0.7.17",
         "@svgr/webpack": "^5.4.0",
