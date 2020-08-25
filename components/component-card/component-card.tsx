@@ -4,21 +4,21 @@ import {
   BaseComponentCard,
   BaseComponentCardProps,
 } from "@teambit/explorer-temp.ui.base-component-card";
-import { Icon } from "@teambit/evangelist-temp.elements.icon";
-import { Image } from "@teambit/evangelist-temp.elements.image";
-import filesize from "filesize";
+// import { Icon } from "@teambit/evangelist-temp.elements.icon";
+// import { Image } from "@teambit/evangelist-temp.elements.image";
+// import filesize from "filesize";
 
 // TODO - export from bit web and use component here
-export function checkIsNaN(number) {
-  if (isNaN(+number)) return true;
-  return false;
-}
+// export function checkIsNaN(number) {
+//   if (isNaN(+number)) return true;
+//   return false;
+// }
 
-export function generateReadableSize(number) {
-  if (number < 0) return;
-  if (checkIsNaN(number)) return;
-  return filesize(number, { round: 0 }).toUpperCase();
-}
+// export function generateReadableSize(number) {
+//   if (number < 0) return;
+//   if (checkIsNaN(number)) return;
+//   return filesize(number, { round: 0 }).toUpperCase();
+// }
 // -------
 
 export type ComponentCardProps = {
@@ -45,7 +45,7 @@ export type ComponentCardProps = {
   /**
    * the framework used to build the component
    */
-  framework?: string;
+  envIcon?: string;
   /**
    * override styles
    */
@@ -72,7 +72,7 @@ export function ComponentCard({
   description,
   // ciStatus,
   size,
-  // framework,
+  envIcon,
   isDeprecated,
   // isIntetnal,
 }: ComponentCardProps) {
@@ -87,16 +87,13 @@ export function ComponentCard({
     >
       <div className={styles.bottom}>
         <div className={styles.left}>
-          <CiStatus />
-          <Icon of="note" className={styles.icon} />
-          <Icon of="expand" className={styles.icon} />
-          <span className={styles.size}>{generateReadableSize(size)}</span>
         </div>
-        <Image
+        <img src={envIcon} className={styles.img} />
+        {/* <Image
           alt="react env"
           className={styles.img}
           src="tutorial-icons/react.svg"
-        />
+        /> */}
       </div>
     </BaseComponentCard>
   );
