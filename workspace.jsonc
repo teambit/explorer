@@ -6,7 +6,7 @@
   /**
    * main configuration of the Bit workspace.
   **/
-  "@teambit/workspace": {
+  "teambit.bit/workspace": {
     /**
      * name of the workspace.
     **/
@@ -18,13 +18,13 @@
     /**
      * set the default scope when there is no matching for the component in the components array.
      **/
-    "defaultScope": "teambit2.explorer-temp",
+    "defaultScope": "teambit.explorer",
     /**
      * set the default directory when there is no matching for the component in the components array.
      **/
     "defaultDirectory": "components",
     "extensions": {
-      "@teambit/dependency-resolver": {
+      "teambit.bit/dependency-resolver": {
         "policy": {
           "devDependencies": {
             "react": "-"
@@ -34,25 +34,25 @@
           }
         }
       },
-      "@teambit/pkg": {
+      "teambit.bit/pkg": {
         "packageJson": {
-          "name": "@teambit/explorer-temp.{name}",
+          "name": "@teambit/explorer.{name}",
           "private": false
         }
       },
-      "@teambit/react": {}
+      "teambit.bit/react": {}
     }
   },
   /**
    * main configuration for component dependency resolution.
   **/
-  "@teambit/dependency-resolver": {
+  "teambit.bit/dependency-resolver": {
     /**
      * choose the package manager for Bit to use. you can choose between 'npm', 'yarn', 'pnpm'
      * and 'librarian'. our recommendation is use 'librarian' which reduces package duplicates
      * and totally removes the need of a 'node_modules' directory in your project.
     */
-    "packageManager": "@teambit/pnpm",
+    "packageManager": "teambit.bit/pnpm",
     /**
     * If true, then Bit will add the "--strict-peer-dependencies" option when invoking package managers.
     * This causes "bit install" to fail if there are unsatisfied peer dependencies, which is
@@ -74,8 +74,8 @@
         "@babel/preset-env": "^7.10.1",
         "@babel/preset-react": "^7.10.1",
         "@bit/bit.bit-dev-utils.time-ago": "0.0.4",
-        "@teambit/evangelist-temp.elements.icon": "^0.0.1",
-        "@teambit/evangelist-temp.elements.image": "^0.0.1",
+        "@teambit/evangelist.elements.icon": "^0.0.1",
+        "@teambit/evangelist.elements.image": "^0.0.1",
         "@bit/bit.utils.fs.sub-paths": "0.0.4",
         "@graphql-modules/core": "^0.7.17",
         "@svgr/webpack": "^5.4.0",
@@ -109,7 +109,7 @@
    * this is extremely useful for upgrading, aligning and building components with a
    * new set of dependencies.
   **/
-  "@teambit/variants": {
+  "teambit.bit/variants": {
     // /**
     //  * wildcards can be used to configure components under a specific namespace.
     //  * this configuration applies the react extensions on all components the `ui` namespace.
