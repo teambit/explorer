@@ -3,23 +3,7 @@ import styles from "./component-card.module.scss";
 import {
   BaseComponentCard,
   BaseComponentCardProps,
-} from "@teambit/explorer-temp.ui.base-component-card";
-// import { Icon } from "@teambit/evangelist-temp.elements.icon";
-// import { Image } from "@teambit/evangelist-temp.elements.image";
-// import filesize from "filesize";
-
-// TODO - export from bit web and use component here
-// export function checkIsNaN(number) {
-//   if (isNaN(+number)) return true;
-//   return false;
-// }
-
-// export function generateReadableSize(number) {
-//   if (number < 0) return;
-//   if (checkIsNaN(number)) return;
-//   return filesize(number, { round: 0 }).toUpperCase();
-// }
-// -------
+} from "@teambit/explorer.ui.base-component-card";
 
 export type ComponentCardProps = {
   /**
@@ -89,11 +73,6 @@ export function ComponentCard({
         <div className={styles.left}>
         </div>
         <img src={envIcon} className={styles.img} />
-        {/* <Image
-          alt="react env"
-          className={styles.img}
-          src="tutorial-icons/react.svg"
-        /> */}
       </div>
     </BaseComponentCard>
   );
