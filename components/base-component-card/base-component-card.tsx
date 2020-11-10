@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { useRouting } from '@teambit/base-ui.routing.provider';
 import styles from "./base-component-card.module.scss";
 
 export type BaseComponentCardProps = {
@@ -38,12 +39,15 @@ export function BaseComponentCard({
   isDeprecated,
   children,
 }: BaseComponentCardProps) {
+  const { Link } = useRouting();
+
   const idArray = id.split("/");
   const nameSpace = idArray.length > 1 && idArray.slice(0, -1).join(" / ");
   const name = idArray.slice(-1);
+
   return (
     <div className={classNames(styles.componentCard, className)}>
-      <a href={id}>
+      <Link href={id}>
         <div
           className={classNames(styles.deprecated, {
             [styles.show]: isDeprecated,
@@ -71,7 +75,7 @@ export function BaseComponentCard({
           </div>
           {children}
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
